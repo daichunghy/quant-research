@@ -1,0 +1,17 @@
+# AgentBiz quant-research lavaan specification.
+# Demonstration/specification only. This is not a fitted model.
+# Declared engine lavaan with estimator ML. No estimator was executed.
+
+model <- '
+  # reverse-scored in data, not here: PU3
+  PU =~ PU1 + PU2 + PU3
+  # reverse-scored in data, not here: PEU3
+  PEU =~ PEU1 + PEU2 + PEU3
+  BI =~ BI1 + BI2 + BI3
+
+  PU ~ PEU
+  BI ~ PU
+  BI ~ PEU
+'
+
+# fit <- lavaan::sem(model, data = your_data)  # not executed by this library

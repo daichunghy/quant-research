@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "agentbiz.smartpls-map.v1",
+  "indicators": [
+    {
+      "construct": "PU",
+      "indicator": "PU1",
+      "mode": "A"
+    },
+    {
+      "construct": "PU",
+      "indicator": "PU2",
+      "mode": "A"
+    },
+    {
+      "construct": "PU",
+      "indicator": "PU3",
+      "mode": "A"
+    },
+    {
+      "construct": "PEU",
+      "indicator": "PEU1",
+      "mode": "A"
+    },
+    {
+      "construct": "PEU",
+      "indicator": "PEU2",
+      "mode": "A"
+    },
+    {
+      "construct": "PEU",
+      "indicator": "PEU3",
+      "mode": "A"
+    },
+    {
+      "construct": "BI",
+      "indicator": "BI1",
+      "mode": "A"
+    },
+    {
+      "construct": "BI",
+      "indicator": "BI2",
+      "mode": "A"
+    },
+    {
+      "construct": "BI",
+      "indicator": "BI3",
+      "mode": "A"
+    }
+  ],
+  "inner": [
+    {
+      "from": "PEU",
+      "to": "PU"
+    },
+    {
+      "from": "PU",
+      "to": "BI"
+    },
+    {
+      "from": "PEU",
+      "to": "BI"
+    }
+  ],
+  "note": "Declared engine smartpls with estimator ML. No estimator was executed. Binary .splsm files are not emitted."
+}
