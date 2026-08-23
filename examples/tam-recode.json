@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "agentbiz.recode.v1",
+  "operations": [
+    { "kind": "reverse-score", "itemCode": "PU3", "as": "PU3_R" },
+    { "kind": "reverse-score", "itemCode": "PEU3", "as": "PEU3_R" },
+    { "kind": "flag-straight-line", "as": "STRAIGHT" }
+  ]
+}

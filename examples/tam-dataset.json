@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "agentbiz.dataset.v1",
+  "columns": [
+    { "name": "id", "role": "id" },
+    { "name": "PU1", "role": "indicator", "itemCode": "PU1" },
+    { "name": "PU2", "role": "indicator", "itemCode": "PU2" },
+    { "name": "PU3", "role": "indicator", "itemCode": "PU3" },
+    { "name": "PEU1", "role": "indicator", "itemCode": "PEU1" },
+    { "name": "PEU2", "role": "indicator", "itemCode": "PEU2" },
+    { "name": "PEU3", "role": "indicator", "itemCode": "PEU3" },
+    { "name": "BI1", "role": "indicator", "itemCode": "BI1" },
+    { "name": "BI2", "role": "indicator", "itemCode": "BI2" },
+    { "name": "BI3", "role": "indicator", "itemCode": "BI3" },
+    { "name": "gender", "role": "demographic" }
+  ],
+  "rowCount": 12,
+  "rows": [
+    { "id": "R01", "PU1": 5, "PU2": 5, "PU3": 5, "PEU1": 5, "PEU2": 5, "PEU3": 5, "BI1": 5, "BI2": 5, "BI3": 5, "gender": "F" },
+    { "id": "R02", "PU1": 9, "PU2": 4, "PU3": 2, "PEU1": 4, "PEU2": 4, "PEU3": 2, "BI1": 4, "BI2": 5, "BI3": 4, "gender": "M" },
+    { "id": "R03", "PU1": 4, "PU2": 4, "PU3": 2, "PEU1": 5, "PEU2": 4, "PEU3": 1, "BI1": 4, "BI2": 4, "BI3": 3, "gender": "F" },
+    { "id": "R04", "PU1": 3, "PU2": null, "PU3": 3, "PEU1": 3, "PEU2": 3, "PEU3": 3, "BI1": 3, "BI2": 3, "BI3": 3, "gender": "M" },
+    { "id": "R05", "PU1": 2, "PU2": 3, "PU3": 4, "PEU1": 2, "PEU2": 2, "PEU3": 4, "BI1": 2, "BI2": 2, "BI3": 3, "gender": "F" },
+    { "id": "R06", "PU1": 5, "PU2": 4, "PU3": 1, "PEU1": 4, "PEU2": 5, "PEU3": 2, "BI1": 5, "BI2": 4, "BI3": 5, "gender": "M" },
+    { "id": "R07", "PU1": 4, "PU2": 5, "PU3": 2, "PEU1": 3, "PEU2": 4, "PEU3": 2, "BI1": 4, "BI2": 4, "BI3": 4, "gender": "F" },
+    { "id": "R08", "PU1": 1, "PU2": 2, "PU3": 5, "PEU1": 1, "PEU2": 2, "PEU3": 5, "BI1": 1, "BI2": 2, "BI3": 1, "gender": "M" },
+    { "id": "R09", "PU1": 3, "PU2": 3, "PU3": 3, "PEU1": 4, "PEU2": 3, "PEU3": 2, "BI1": 3, "BI2": 4, "BI3": 3, "gender": "F" },
+    { "id": "R10", "PU1": 5, "PU2": 5, "PU3": 1, "PEU1": 5, "PEU2": 5, "PEU3": 1, "BI1": 5, "BI2": 5, "BI3": 5, "gender": "M" },
+    { "id": "R11", "PU1": 4, "PU2": 3, "PU3": 2, "PEU1": 4, "PEU2": 4, "PEU3": 2, "BI1": 4, "BI2": 3, "BI3": 4, "gender": "F" },
+    { "id": "R12", "PU1": 2, "PU2": 2, "PU3": 4, "PEU1": 3, "PEU2": 2, "PEU3": 4, "BI1": 2, "BI2": 3, "BI3": 2, "gender": "M" }
+  ]
+}

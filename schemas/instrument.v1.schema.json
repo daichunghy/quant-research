@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentbiz.dev/schemas/instrument.v1.schema.json",
+  "title": "AgentBiz instrument v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "language", "constructs"],
+  "properties": {
+    "schemaVersion": { "const": "agentbiz.instrument.v1" },
+    "language": { "type": "string", "minLength": 1 },
+    "constructs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "name", "kind", "scale", "items"],
+        "properties": {
+          "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{1,31}$" },
+          "name": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["reflective", "formative"] },
+          "scale": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["min", "max"],
+            "properties": {
+              "min": { "type": "integer", "enum": [1, 2] },
+              "max": { "type": "integer", "enum": [5, 7] },
+              "anchors": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["value", "label"],
+                  "properties": {
+                    "value": { "type": "integer" },
+                    "label": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            }
+          },
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["code", "text", "status"],
+              "properties": {
+                "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{1,31}$" },
+                "text": { "type": "string", "minLength": 1 },
+                "reverse": { "type": "boolean" },
+                "status": { "enum": ["demonstration", "cited"] },
+                "source": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "citation": { "type": "string", "minLength": 1 },
+                    "note": { "type": "string", "minLength": 1 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

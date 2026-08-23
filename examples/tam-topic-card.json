@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "agentbiz.topic-card.v1",
+  "question": "How are perceived usefulness and perceived ease of use associated with behavioural intention in this demonstration TAM?",
+  "claimClass": "association",
+  "population": "unknown",
+  "unit": "survey respondent",
+  "timeframe": "unknown",
+  "constructCodes": ["PU", "PEU", "BI"],
+  "hypotheses": [
+    { "id": "H1", "from": "PEU", "to": "PU", "sign": "+" },
+    { "id": "H2", "from": "PU", "to": "BI", "sign": "+" },
+    { "id": "H3", "from": "PEU", "to": "BI", "sign": "+" }
+  ],
+  "engine": "lavaan",
+  "mode": "confirmatory"
+}

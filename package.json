@@ -1,0 +1,65 @@
+{
+  "name": "@agentbiz/quant-research",
+  "version": "0.1.0-alpha.1",
+  "description": "Deterministic instrument, recode, and measurement-spec contracts for agentic quantitative research. Does not run SEM or write spreadsheets.",
+  "license": "Apache-2.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daichunghy/quant-research.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daichunghy/quant-research/issues"
+  },
+  "homepage": "https://github.com/daichunghy/quant-research#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20 <23"
+  },
+  "bin": {
+    "agentbiz-quant": "dist/cli.js",
+    "agentbiz-quant-mcp": "dist/mcp.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tools": {
+      "types": "./dist/tools/index.d.ts",
+      "default": "./dist/tools/index.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.ts",
+      "default": "./dist/mcp.js"
+    }
+  },
+  "files": [
+    "dist",
+    "schemas",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check:pack": "node scripts/check-pack.mjs",
+    "check:schema": "node scripts/check-schema.mjs",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "check:smoke": "node scripts/cli-smoke.mjs",
+    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:pack && npm run check:secrets && npm run check:smoke"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2"
+  }
+}

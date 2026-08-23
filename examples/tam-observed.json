@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "agentbiz.gap-map.v1",
+  "observed": [
+    { "column": "PU1", "itemCode": "PU1", "constructCode": "PU", "reverse": false, "scale": { "min": 1, "max": 5 } },
+    { "column": "PU2", "itemCode": "PU2", "constructCode": "PU" },
+    { "column": "PU3", "itemCode": "PU3", "constructCode": "PU", "reverse": true },
+    { "column": "PEU1", "itemCode": "PEU1", "constructCode": "PEU" },
+    { "column": "PEU2", "itemCode": "PEU2", "constructCode": "PEU" },
+    { "column": "PEU3", "itemCode": "PEU3", "constructCode": "PEU", "reverse": true },
+    { "column": "BI1", "itemCode": "BI1", "constructCode": "BI" },
+    { "column": "BI2", "itemCode": "BI2", "constructCode": "BI" },
+    { "column": "BI3", "itemCode": "BI3", "constructCode": "BI" }
+  ]
+}

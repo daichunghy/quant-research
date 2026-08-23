@@ -1,0 +1,163 @@
+{
+  "instrument": {
+    "schemaVersion": "agentbiz.instrument.v1",
+    "language": "en",
+    "constructs": [
+      {
+        "code": "PU",
+        "name": "Perceived usefulness",
+        "kind": "reflective",
+        "scale": {
+          "min": 1,
+          "max": 5,
+          "anchors": [
+            {
+              "value": 1,
+              "label": "Strongly disagree"
+            },
+            {
+              "value": 3,
+              "label": "Neutral"
+            },
+            {
+              "value": 5,
+              "label": "Strongly agree"
+            }
+          ]
+        },
+        "items": [
+          {
+            "code": "PU1",
+            "text": "Using this system would improve my performance.",
+            "status": "demonstration",
+            "source": {
+              "note": "Demonstration item; replace with a cited validated scale."
+            }
+          },
+          {
+            "code": "PU2",
+            "text": "Using this system would increase my productivity.",
+            "status": "demonstration",
+            "source": {
+              "note": "Demonstration item; replace with a cited validated scale."
+            }
+          },
+          {
+            "code": "PU3",
+            "text": "Using this system would make it harder to do my job.",
+            "reverse": true,
+            "status": "demonstration",
+            "source": {
+              "note": "Demonstration reverse-keyed item; not a published scale."
+            }
+          }
+        ]
+      },
+      {
+        "code": "PEU",
+        "name": "Perceived ease of use",
+        "kind": "reflective",
+        "scale": {
+          "min": 1,
+          "max": 5,
+          "anchors": [
+            {
+              "value": 1,
+              "label": "Strongly disagree"
+            },
+            {
+              "value": 5,
+              "label": "Strongly agree"
+            }
+          ]
+        },
+        "items": [
+          {
+            "code": "PEU1",
+            "text": "Learning to use this system would be easy for me.",
+            "status": "demonstration"
+          },
+          {
+            "code": "PEU2",
+            "text": "I would find this system easy to use.",
+            "status": "demonstration"
+          },
+          {
+            "code": "PEU3",
+            "text": "This system would be cumbersome to operate.",
+            "reverse": true,
+            "status": "demonstration"
+          }
+        ]
+      },
+      {
+        "code": "BI",
+        "name": "Behavioural intention",
+        "kind": "reflective",
+        "scale": {
+          "min": 1,
+          "max": 5
+        },
+        "items": [
+          {
+            "code": "BI1",
+            "text": "I intend to use this system.",
+            "status": "demonstration"
+          },
+          {
+            "code": "BI2",
+            "text": "I predict I would use this system.",
+            "status": "demonstration"
+          },
+          {
+            "code": "BI3",
+            "text": "I would not hesitate to use this system.",
+            "status": "demonstration"
+          }
+        ]
+      }
+    ]
+  },
+  "topicCard": {
+    "schemaVersion": "agentbiz.topic-card.v1",
+    "question": "How are perceived usefulness and perceived ease of use associated with behavioural intention in this demonstration TAM?",
+    "claimClass": "association",
+    "population": "unknown",
+    "unit": "survey respondent",
+    "timeframe": "unknown",
+    "constructCodes": [
+      "PU",
+      "PEU",
+      "BI"
+    ],
+    "hypotheses": [
+      {
+        "id": "H1",
+        "from": "PEU",
+        "to": "PU",
+        "sign": "+"
+      },
+      {
+        "id": "H2",
+        "from": "PU",
+        "to": "BI",
+        "sign": "+"
+      },
+      {
+        "id": "H3",
+        "from": "PEU",
+        "to": "BI",
+        "sign": "+"
+      }
+    ],
+    "engine": "lavaan",
+    "mode": "confirmatory"
+  },
+  "measurement": {
+    "schemaVersion": "agentbiz.measurement.v1",
+    "mode": "cb-sem",
+    "engineOptions": {
+      "estimator": "ML"
+    }
+  }
+}
