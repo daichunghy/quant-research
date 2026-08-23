@@ -6,21 +6,29 @@ Large language models do not reliably keep Likert bounds, reverse-keyed items, c
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Status:** public alpha candidate (`0.1.0-alpha.4`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Status:** public alpha (`0.1.0-alpha.5`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
-## Install from the public source
+## Install from npm
 
-The npm alpha is prepared but registry publication is pending npm OTP
-verification. Use the verified GitHub tag meanwhile:
+Install the public alpha from the npm registry:
 
 ```bash
-git clone --branch v0.1.0-alpha.4 https://github.com/daichunghy/quant-research.git
+npm install @agentbiz/quant-research@alpha
+```
+
+The package targets Node.js 20 and 22. Use the GitHub repository for release
+notes, boundary documents, examples, and issue reporting.
+
+## Verify from source
+
+To reproduce the committed release locally, use the verified GitHub tag:
+
+```bash
+git clone --branch v0.1.0-alpha.5 https://github.com/daichunghy/quant-research.git
 cd quant-research
 npm ci
 npm run verify
 ```
-
-The package targets Node.js 20 and 22. Use the GitHub repository for the release notes, boundary documents, examples, and issue reporting.
 
 Support and first-run questions: [`.github/SUPPORT.md`](.github/SUPPORT.md) or [GitHub Discussions](https://github.com/daichunghy/quant-research/discussions).
 
