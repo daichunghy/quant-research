@@ -8,6 +8,10 @@ It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPS
 
 **Status:** public alpha (`0.1.0-alpha.5`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
+> If it caught one inconsistent recode before analysis,
+> [star it](https://github.com/daichunghy/quant-research/stargazers). That is
+> the only growth signal this repo tracks.
+
 ## Install from npm
 
 Install the public alpha from the npm registry:
@@ -104,6 +108,20 @@ The TAM example items are **demonstration items**. They are not published scales
 - Empty `@agentbiz/sales-crm` / `finance-hr` packages
 
 The alpha is locally verified by `npm run verify`, including schema reconciliation, package-content checks, secret scanning, and CLI smoke tests. Local verification is not evidence of external users, registry adoption, ethical approval, or correctly specified research.
+
+## Who this is for
+
+- Survey researchers and students whose instruments go into SPSS, lavaan, AMOS,
+  or SmartPLS and need bounds, reverse-keyed items, and coverage checked before
+  analysis.
+- Research assistants who maintain scale banks and codebooks across survey
+  waves.
+- Agent builders who need a typed contract layer under a research copilot.
+- Not a fit if you want fit indices, estimation, or item deletion — see
+  Non-goals.
+
+If it caught one inconsistent recode for you, star the repository. It helps
+other researchers find the contracts.
 
 ## License
 
