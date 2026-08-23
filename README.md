@@ -33,6 +33,8 @@ npm run verify
 Support and first-run questions: [`.github/SUPPORT.md`](.github/SUPPORT.md) or [GitHub Discussions](https://github.com/daichunghy/quant-research/discussions).
 
 This is Github 4. It is not PatchGate, contribkit, or OpenSheet-AI. See [docs/BOUNDARY.md](docs/BOUNDARY.md).
+For citation and clean-room reproduction, see [`CITATION.cff`](CITATION.cff) and
+[`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
 
 ## Install (local)
 
