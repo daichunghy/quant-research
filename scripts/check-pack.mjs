@@ -25,7 +25,7 @@ if (paths.length === 0) {
   process.exit(1);
 }
 
-const allowed = /^(package\.json|LICENSE|README\.md|dist\/|schemas\/)/;
+const allowed = /^(package\.json|LICENSE|README\.md|dist\/|schemas\/|examples\/)/;
 const forbidden = paths.filter((path) => !allowed.test(path));
 if (forbidden.length > 0) {
   process.stderr.write(`Packed unexpected files:\n${forbidden.join("\n")}\n`);
@@ -48,6 +48,8 @@ const required = [
   "schemas/recode.v1.schema.json",
   "schemas/measurement.v1.schema.json",
   "schemas/receipt.v1.schema.json",
+  "examples/tam-instrument.json",
+  "examples/tam-bundle.json",
 ];
 const missing = required.filter((path) => !paths.includes(path));
 if (missing.length > 0) {
