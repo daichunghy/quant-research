@@ -2,14 +2,14 @@
 
 Tạo repo này **không** làm `daichunghy` đủ Claude Max, Codex for OSS, hay ChatGPT Pro.
 
-## Hiện trạng sau foundation local
+## Hiện trạng public alpha — 23 August 2026
 
 | Tín hiệu Anthropic / OpenAI có thể verify | Giá trị |
 | --- | --- |
 | Dependent repos / packages | 0 |
-| Monthly downloads | 0 (`private: true`) |
+| Monthly downloads | Chưa có số liệu public ổn định sau khi package mới được publish |
 | External contributors | 0 |
-| Public npm | unpublished |
+| Public npm | `@agentbiz/quant-research@0.1.0-alpha.5` |
 | OpenSSF criticality ≥ 0.4 | không claim |
 
 ## Cấm
@@ -25,9 +25,9 @@ Trùng spirit của Claude for OSS terms mục 7:
 ## Đường thật (không làm trong lượt ship)
 
 1. Giữ contract ổn, test xanh.
-2. Public GitHub chỉ khi owner authorize — yêu cầu hiện tại là owner authorization cho public alpha, không phải bằng chứng grant.
+2. Public alpha là bằng chứng phát hành, không phải bằng chứng grant.
 3. Một consumer ngoài thật (EduTech, research CLI, hoặc OpenSheet consume artifact).
-4. npm publish khi owner authorize và org `@agentbiz` tồn tại; nếu org chưa có quyền publish thì phải dừng ở GitHub release, không đổi tên package để né namespace.
+4. Ghi nhận dependents, downloads và external contributors chỉ khi có dữ liệu public thật.
 5. Form Claude vẫn **contribkit**. Form Codex vẫn **PatchGate**.
 
 Github 4 chỉ trở thành câu chuyện Ecosystem Impact khi có dependents **thật**. Micro-package là hệ quả của API ổn, không phải chiến thuật grant.

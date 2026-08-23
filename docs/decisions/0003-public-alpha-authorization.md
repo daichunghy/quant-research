@@ -12,10 +12,10 @@ The earlier contract-first decision kept this repository private to avoid shippi
 Publish a narrow public alpha:
 
 - GitHub repository: `daichunghy/quant-research`;
-- npm package: `@agentbiz/quant-research@0.1.0-alpha.4`, only if the `@agentbiz` namespace is writable and npm OTP verification is completed by the authenticated account;
+- npm package: `@agentbiz/quant-research@0.1.0-alpha.5`, published under the writable `@agentbiz` namespace after authenticated npm verification;
 - public claims remain limited to typed instrument, coverage, dataset, recode, measurement-spec, receipt, and emitter contracts;
 - SEM estimation, fit indices, reliability statistics, spreadsheet writes, ethical approval, grant eligibility, and adoption remain outside the release claim.
 
 ## Evidence gate
 
-Before publication, run `npm run verify` and confirm that the committed tree, GitHub default branch, release tag, and npm tarball contain the same version. If npm namespace ownership blocks publication, publish the GitHub repository and release, document the registry blocker, and do not invent a substitute package name.
+Publication evidence: `npm run verify` passes, `main` and `v0.1.0-alpha.5` are public, and a clean consumer install resolves the npm alpha. Consumer dependency warnings remain separate from the package identity and adoption claims.
