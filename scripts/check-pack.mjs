@@ -50,6 +50,7 @@ const required = [
   "schemas/receipt.v1.schema.json",
   "examples/tam-instrument.json",
   "examples/tam-bundle.json",
+  "examples/reproducibility-manifest.json",
 ];
 const missing = required.filter((path) => !paths.includes(path));
 if (missing.length > 0) {
