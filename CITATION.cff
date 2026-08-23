@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If this contract library supports your research workflow, please cite the repository or the specific release used."
+title: "@agentbiz/quant-research"
+version: 0.1.0-alpha.5
+date-released: 2026-08-23
+type: software
+abstract: "Deterministic instrument, coverage, recode, and measurement-spec contracts for agentic quantitative research."
+authors:
+  - family-names: "Đái"
+    given-names: "Chung Hy"
+    affiliation: "1Office"
+    email: "daichunghy30042004@gmail.com"
+repository-code: "https://github.com/daichunghy/quant-research"
+license: Apache-2.0
+keywords:
+  - quantitative research
+  - survey instruments
+  - reproducibility
+  - SPSS
+  - lavaan
+  - SmartPLS
