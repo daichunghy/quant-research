@@ -1,6 +1,6 @@
 {
   "name": "@agentbiz/quant-research",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "Deterministic instrument, recode, and measurement-spec contracts for agentic quantitative research. Does not run SEM or write spreadsheets.",
   "license": "Apache-2.0",
   "private": false,

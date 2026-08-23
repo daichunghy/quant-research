@@ -6,7 +6,7 @@ Large language models do not reliably keep Likert bounds, reverse-keyed items, c
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Status:** public alpha candidate (`0.1.0-alpha.2`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Status:** public alpha candidate (`0.1.0-alpha.3`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
 ## Install from the public source
 
@@ -14,7 +14,7 @@ The npm alpha is prepared but registry publication is pending npm OTP
 verification. Use the verified GitHub tag meanwhile:
 
 ```bash
-git clone --branch v0.1.0-alpha.2 https://github.com/daichunghy/quant-research.git
+git clone --branch v0.1.0-alpha.3 https://github.com/daichunghy/quant-research.git
 cd quant-research
 npm ci
 npm run verify
