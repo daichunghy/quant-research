@@ -8,10 +8,16 @@ It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPS
 
 **Status:** public alpha candidate (`0.1.0-alpha.1`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
-## Install
+## Install from the public source
+
+The npm alpha is prepared but registry publication is pending npm OTP
+verification. Use the verified GitHub tag meanwhile:
 
 ```bash
-npm install @agentbiz/quant-research@alpha
+git clone --branch v0.1.0-alpha.2 https://github.com/daichunghy/quant-research.git
+cd quant-research
+npm ci
+npm run verify
 ```
 
 The package targets Node.js 20 and 22. Use the GitHub repository for the release notes, boundary documents, examples, and issue reporting.

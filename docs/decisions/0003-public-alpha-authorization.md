@@ -12,7 +12,7 @@ The earlier contract-first decision kept this repository private to avoid shippi
 Publish a narrow public alpha:
 
 - GitHub repository: `daichunghy/quant-research`;
-- npm package: `@agentbiz/quant-research@0.1.0-alpha.1`, only if the `@agentbiz` namespace is writable by the authenticated npm account;
+- npm package: `@agentbiz/quant-research@0.1.0-alpha.2`, only if the `@agentbiz` namespace is writable and npm OTP verification is completed by the authenticated account;
 - public claims remain limited to typed instrument, coverage, dataset, recode, measurement-spec, receipt, and emitter contracts;
 - SEM estimation, fit indices, reliability statistics, spreadsheet writes, ethical approval, grant eligibility, and adoption remain outside the release claim.
 
