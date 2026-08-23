@@ -123,6 +123,8 @@ The alpha is locally verified by `npm run verify`, including schema reconciliati
 If it caught one inconsistent recode for you, star the repository. It helps
 other researchers find the contracts.
 
+Release history: [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
