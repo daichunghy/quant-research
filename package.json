@@ -46,6 +46,7 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "first-use": "npm run build && node scripts/first-use.mjs",
     "prepack": "npm run build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",

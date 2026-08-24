@@ -8,13 +8,7 @@ before data analysis begins.
 
 ```bash
 npm ci
-npm run build
-node dist/cli.js compile examples/tam-instrument.json
-node dist/cli.js codebook examples/tam-instrument.json
-node dist/cli.js recode examples/tam-instrument.json examples/tam-dataset.json
-node dist/cli.js gap examples/tam-instrument.json examples/tam-observed.json
-node dist/cli.js emit-lavaan examples/tam-bundle.json
-node dist/cli.js emit-spss examples/tam-bundle.json
+npm run first-use
 ```
 
 The outputs should make the following visible:
