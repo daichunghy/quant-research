@@ -50,6 +50,13 @@ const required = [
   "schemas/receipt.v1.schema.json",
   "examples/tam-instrument.json",
   "examples/tam-bundle.json",
+  "examples/workflow-readiness-instrument.json",
+  "examples/workflow-readiness-bundle.json",
+  "examples/workflow-readiness-topic-card.json",
+  "examples/workflow-readiness-measurement.json",
+  "examples/workflow-readiness-recode.json",
+  "examples/workflow-readiness-dataset.json",
+  "examples/workflow-readiness-observed.json",
 ];
 const missing = required.filter((path) => !paths.includes(path));
 if (missing.length > 0) {
