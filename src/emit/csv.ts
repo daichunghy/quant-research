@@ -1,11 +1,5 @@
 import type { CellValue, Dataset } from "../core/types.js";
-
-function csvEscape(value: string): string {
-  if (/[",\n]/.test(value)) {
-    return `"${value.replaceAll('"', '""')}"`;
-  }
-  return value;
-}
+import { csvEscape } from "./escape.js";
 
 function cellToCsv(value: CellValue | undefined): string {
   if (value === null || value === undefined) {
@@ -14,8 +8,7 @@ function cellToCsv(value: CellValue | undefined): string {
   if (typeof value === "number") {
     return String(value);
   }
-  const safe = /^[=+\-@]/.test(value) ? `'${value}` : value;
-  return csvEscape(safe);
+  return csvEscape(value);
 }
 
 export function emitDatasetCsv(dataset: Dataset): string {

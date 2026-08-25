@@ -3,6 +3,7 @@ import { emitCodebookMarkdown, emitDatasetCsv, emitDictionaryCsv, emitSpssDataLi
 import { compileGapMap, observedFromDataset } from "../src/gap-map/index.js";
 import { handleMcpMessage } from "../src/mcp.js";
 import { parseDataset } from "../src/dataset/index.js";
+import { parseInstrument } from "../src/instrument/index.js";
 import { compileRecode, recodePlanFromInstrument } from "../src/recode/index.js";
 import { executeTool } from "../src/tools/execute.js";
 import { loadExample, tamInstrument } from "./helpers.js";
@@ -43,6 +44,40 @@ describe("codebook and csv", () => {
     expect(csv).toContain("'=SUM(A1)");
     expect(csv).toContain("'@cmd");
     expect(csv).toContain("safe");
+  });
+
+  it("keeps hostile free text structurally safe in Markdown and dictionary CSV", () => {
+    const instrument = parseInstrument({
+      schemaVersion: "agentbiz.instrument.v1",
+      language: "English\\Vietnamese\ncodebook",
+      constructs: [
+        {
+          code: "EDGE",
+          name: 'Name, "quoted"\r\nnext',
+          kind: "reflective",
+          scale: { min: 1, max: 5 },
+          items: [
+            {
+              code: "EDGE1",
+              text: '=SUM(A1)|quote "x"\\path\r\nnext',
+              reverse: false,
+              status: "demonstration",
+            },
+          ],
+        },
+      ],
+    });
+
+    const markdown = emitCodebookMarkdown(instrument);
+    const itemLine = markdown.split("\n").find((line) => line.includes("EDGE1"));
+    expect(markdown).toContain("Language: English\\\\Vietnamese codebook");
+    expect(markdown).toContain('## EDGE — Name, "quoted" next');
+    expect(itemLine).toBe('| EDGE1 | no | demonstration | =SUM(A1)\\|quote "x"\\\\path<br>next |');
+    expect(markdown).not.toContain("EDGE1 | no | demonstration | =SUM(A1)|quote");
+
+    const csv = emitDictionaryCsv(instrument);
+    expect(csv).toContain('"Name, ""quoted""\r\nnext"');
+    expect(csv).toContain('"\'=SUM(A1)|quote ""x""\\path\r\nnext"');
   });
 });
 
