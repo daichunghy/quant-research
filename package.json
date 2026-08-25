@@ -52,9 +52,10 @@
     "test:watch": "vitest",
     "check:pack": "node scripts/check-pack.mjs",
     "check:schema": "node scripts/check-schema.mjs",
+    "check:errors": "node scripts/check-errors.mjs",
     "check:secrets": "node scripts/check-secrets.mjs",
     "check:smoke": "node scripts/cli-smoke.mjs",
-    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:pack && npm run check:secrets && npm run check:smoke"
+    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:errors && npm run check:pack && npm run check:secrets && npm run check:smoke"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",
