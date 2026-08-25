@@ -1,12 +1,12 @@
 # @agentbiz/quant-research
 
-Deterministic **instrument, coverage, recode, and measurement-spec** contracts for agentic quantitative research.
+`@agentbiz/quant-research` turns a declared research instrument into a checked codebook, recode artifact, coverage result, and analysis specification before anyone opens SPSS, AMOS, SmartPLS, or lavaan.
 
 Large language models do not reliably keep Likert bounds, reverse-keyed items, construct codes, or SEM path lists consistent. This library is the typed contract those agents should call **before** anyone opens SPSS, AMOS, SmartPLS, or lavaan.
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Status:** public alpha (`0.1.0-alpha.5`). This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Live status (2026-08-24):** public alpha (`0.1.0-alpha.5` on GitHub, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. npm `alpha` resolves `0.1.0-alpha.5` while `latest` remains `0.1.0-alpha.4`. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
 > If it caught one inconsistent recode before analysis,
 > [star it](https://github.com/daichunghy/quant-research/stargazers). That is
@@ -39,6 +39,8 @@ Support and first-run questions: [`.github/SUPPORT.md`](.github/SUPPORT.md) or [
 This is Github 4. It is not PatchGate, contribkit, or OpenSheet-AI. See [docs/BOUNDARY.md](docs/BOUNDARY.md).
 For citation and clean-room reproduction, see [`CITATION.cff`](CITATION.cff) and
 [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
+
+The shortest route to a concrete artifact is the [first-use walkthrough](docs/first-use.md).
 
 ## Install (local)
 
