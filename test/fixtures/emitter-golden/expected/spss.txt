@@ -1,0 +1,44 @@
+* AgentBiz quant-research SPSS syntax.
+* Demonstration/specification only. This file does not contain estimated results.
+* Do not treat this as executed output from SPSS.
+
+VARIABLE LABELS
+  PU1 'Using this system would improve my performance.'
+  PU2 'Using this system would increase my productivity.'
+  PU3 'Using this system would make it harder to do my job.'
+  PEU1 'Learning to use this system would be easy for me.'
+  PEU2 'I would find this system easy to use.'
+  PEU3 'This system would be cumbersome to operate.'
+  BI1 'I intend to use this system.'
+  BI2 'I predict I would use this system.'
+  BI3 'I would not hesitate to use this system.'
+  .
+
+VALUE LABELS PU1 PU2 PU3 PEU1 PEU2 PEU3 BI1 BI2 BI3
+  1 'Strongly disagree'
+  3 'Neutral'
+  5 'Strongly agree'
+  .
+
+RECODE PU3 (1=5) (2=4) (3=3) (4=2) (5=1) INTO PU3_R.
+VARIABLE LABELS PU3_R 'Using this system would make it harder to do my job. (reversed)'.
+RECODE PEU3 (1=5) (2=4) (3=3) (4=2) (5=1) INTO PEU3_R.
+VARIABLE LABELS PEU3_R 'This system would be cumbersome to operate. (reversed)'.
+
+RELIABILITY
+  /VARIABLES=PU1 PU2 PU3_R
+  /MODEL=ALPHA
+  /SUMMARY=TOTAL.
+
+RELIABILITY
+  /VARIABLES=PEU1 PEU2 PEU3_R
+  /MODEL=ALPHA
+  /SUMMARY=TOTAL.
+
+RELIABILITY
+  /VARIABLES=BI1 BI2 BI3
+  /MODEL=ALPHA
+  /SUMMARY=TOTAL.
+
+* Structural / SEM estimation is out of scope for this compiler.
+* Use AMOS, lavaan, or SmartPLS emitters for path specifications.

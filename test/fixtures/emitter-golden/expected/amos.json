@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "agentbiz.amos-spec.v1",
+  "variables": [
+    "PU",
+    "PEU",
+    "BI",
+    "PU1",
+    "PU2",
+    "PU3",
+    "PEU1",
+    "PEU2",
+    "PEU3",
+    "BI1",
+    "BI2",
+    "BI3"
+  ],
+  "paths": [
+    {
+      "from": "PU1",
+      "to": "PU",
+      "type": "load"
+    },
+    {
+      "from": "PU2",
+      "to": "PU",
+      "type": "load"
+    },
+    {
+      "from": "PU3",
+      "to": "PU",
+      "type": "load"
+    },
+    {
+      "from": "PEU1",
+      "to": "PEU",
+      "type": "load"
+    },
+    {
+      "from": "PEU2",
+      "to": "PEU",
+      "type": "load"
+    },
+    {
+      "from": "PEU3",
+      "to": "PEU",
+      "type": "load"
+    },
+    {
+      "from": "BI1",
+      "to": "BI",
+      "type": "load"
+    },
+    {
+      "from": "BI2",
+      "to": "BI",
+      "type": "load"
+    },
+    {
+      "from": "BI3",
+      "to": "BI",
+      "type": "load"
+    },
+    {
+      "from": "PEU",
+      "to": "PU",
+      "type": "regress"
+    },
+    {
+      "from": "PU",
+      "to": "BI",
+      "type": "regress"
+    },
+    {
+      "from": "PEU",
+      "to": "BI",
+      "type": "regress"
+    }
+  ],
+  "note": "Declared engine amos with estimator ML. No estimator was executed. Binary .amw files are not emitted."
+}
