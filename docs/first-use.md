@@ -11,6 +11,13 @@ npm ci
 npm run first-use
 ```
 
+To exercise a second multi-factor shape, compile the service-quality
+demonstration instrument as well:
+
+```bash
+node dist/cli.js compile examples/service-quality-instrument.json
+```
+
 The outputs should make the following visible:
 
 - construct and item codes with Likert bounds and reverse flags;
@@ -18,7 +25,7 @@ The outputs should make the following visible:
 - covered, partial, missing, mismatch, and unexpected indicators;
 - declared syntax for lavaan or SPSS without pretending that estimation ran.
 
-The TAM items are demonstrations, not published scales. This package does not
+The TAM and service-quality inputs are demonstrations, not published scales. This package does not
 estimate SEM, compute fit indices, write spreadsheets, call a model provider,
 or decide whether a measurement model is valid.
 

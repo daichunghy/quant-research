@@ -51,6 +51,7 @@ npm run verify
 
 ```bash
 node dist/cli.js compile examples/tam-instrument.json
+node dist/cli.js compile examples/service-quality-instrument.json
 node dist/cli.js codebook examples/tam-instrument.json
 node dist/cli.js recode examples/tam-instrument.json examples/tam-dataset.json
 node dist/cli.js gap examples/tam-instrument.json examples/tam-observed.json
@@ -99,7 +100,7 @@ Agent tool JSON Schemas live on `@agentbiz/quant-research/tools`. They describe 
 | `agentbiz.measurement.v1` | Declared CB-SEM / PLS-SEM / reliability spec |
 | emitters | SPSS syntax, lavaan text, AMOS JSON paths, SmartPLS indicator map |
 
-The TAM example items are **demonstration items**. They are not published scales.
+The TAM and service-quality example items are **demonstration items**. They are not published scales.
 
 ## Non-goals
 

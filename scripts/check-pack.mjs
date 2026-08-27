@@ -49,6 +49,7 @@ const required = [
   "schemas/measurement.v1.schema.json",
   "schemas/receipt.v1.schema.json",
   "examples/tam-instrument.json",
+  "examples/service-quality-instrument.json",
   "examples/tam-bundle.json",
   "examples/reproducibility-manifest.json",
 ];

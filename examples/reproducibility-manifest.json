@@ -6,6 +6,10 @@
   },
   "fixtures": [
     {
+      "path": "examples/service-quality-instrument.json",
+      "sha256": "sha256:c24d330212534988fa87581a5d4336e89879c5413cc3e640afb24eb2ef314461"
+    },
+    {
       "path": "examples/tam-bundle.json",
       "sha256": "sha256:b2a95a6360ab34b81303678882742a5186600148cd546c9166ccec1f21f1d103"
     },
