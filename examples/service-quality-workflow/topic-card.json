@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "agentbiz.topic-card.v1",
+  "question": "How are service reliability and responsiveness associated with overall customer satisfaction in this demonstration service experience study?",
+  "claimClass": "association",
+  "population": "demonstration service users",
+  "unit": "survey respondent",
+  "timeframe": "after a completed service interaction",
+  "constructCodes": ["REL", "RESP", "SAT"],
+  "hypotheses": [
+    { "id": "H1", "from": "REL", "to": "SAT", "sign": "+" },
+    { "id": "H2", "from": "RESP", "to": "SAT", "sign": "+" },
+    { "id": "H3", "from": "REL", "to": "RESP", "sign": "+" }
+  ],
+  "engine": "lavaan",
+  "mode": "confirmatory"
+}

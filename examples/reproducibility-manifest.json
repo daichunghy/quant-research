@@ -2,9 +2,13 @@
   "manifestVersion": "agentbiz.reproducibility.v1",
   "package": {
     "name": "@agentbiz/quant-research",
-    "version": "0.1.0-alpha.5"
+    "version": "0.1.0-alpha.6"
   },
   "fixtures": [
+    {
+      "path": "examples/service-quality-instrument.json",
+      "sha256": "sha256:c24d330212534988fa87581a5d4336e89879c5413cc3e640afb24eb2ef314461"
+    },
     {
       "path": "examples/tam-bundle.json",
       "sha256": "sha256:b2a95a6360ab34b81303678882742a5186600148cd546c9166ccec1f21f1d103"
@@ -32,6 +36,10 @@
     {
       "path": "examples/tam-topic-card.json",
       "sha256": "sha256:5ee4ca7bfc930c85fb9bbb7d956a5c13cb6b6c054c343d454ffe2f0619bea98a"
+    },
+    {
+      "path": "examples/tam-workflow.json",
+      "sha256": "sha256:d9aeb588ab4311bef8e5e9de7c44f54fc111e66fbc779c4183a8dbb5f9174758"
     }
   ],
   "replays": [

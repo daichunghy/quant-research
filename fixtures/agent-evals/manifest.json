@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "evidenceBoundary": "local workflow evidence only",
+  "tasks": [
+    { "id": "QR-01", "title": "Contract and schema", "paths": ["src/core", "schemas", "test/schema-reconciliation.test.ts"], "commands": ["npm run check:schema", "npm run typecheck"], "owner": "contract", "risk": "high", "humanReview": true },
+    { "id": "QR-02", "title": "Instrument compiler", "paths": ["src/instrument", "src/core", "test/instrument.test.ts", "test/reproducibility.test.ts"], "commands": ["npm run test", "npm run typecheck"], "owner": "instrument", "risk": "high", "humanReview": true },
+    { "id": "QR-03", "title": "Provenance and topic cards", "paths": ["src/topic-card", "src/core", "test/intent.test.ts", "test/modules.test.ts"], "commands": ["npm run test", "npm run check:errors"], "owner": "provenance", "risk": "high", "humanReview": true },
+    { "id": "QR-04", "title": "Gap map and dataset audit", "paths": ["src/gap-map", "src/dataset", "test/pipeline.test.ts", "test/boundary.test.ts"], "commands": ["npm run test", "npm run check:smoke"], "owner": "dataset", "risk": "high", "humanReview": true },
+    { "id": "QR-05", "title": "Recode safety", "paths": ["src/recode", "test/boundary.test.ts", "test/pipeline.test.ts"], "commands": ["npm run test", "npm run check:errors"], "owner": "recode", "risk": "critical", "humanReview": true },
+    { "id": "QR-06", "title": "Measurement specification", "paths": ["src/measurement", "test/measurement.test.ts", "test/boundary.test.ts"], "commands": ["npm run test", "npm run check:errors"], "owner": "measurement", "risk": "critical", "humanReview": true },
+    { "id": "QR-07", "title": "Emitters and tools", "paths": ["src/emit", "src/tools", "src/mcp.ts", "test/emitter-golden.test.ts", "test/tool.test.ts"], "commands": ["npm run test", "npm run check:secrets"], "owner": "emit", "risk": "high", "humanReview": true },
+    { "id": "QR-08", "title": "CLI and package surface", "paths": ["src/cli.ts", "scripts", "package.json", "README.md"], "commands": ["npm run check:smoke", "npm run first-use", "npm run check:pack", "npm run check:errors"], "owner": "release", "risk": "high", "humanReview": true }
+  ]
+}
