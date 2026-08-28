@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "agentbiz.dataset.v1",
+  "columns": [
+    { "name": "id", "role": "id" },
+    { "name": "REL1", "role": "indicator", "itemCode": "REL1" },
+    { "name": "REL2", "role": "indicator", "itemCode": "REL2" },
+    { "name": "REL3", "role": "indicator", "itemCode": "REL3" },
+    { "name": "RESP1", "role": "indicator", "itemCode": "RESP1" },
+    { "name": "RESP2", "role": "indicator", "itemCode": "RESP2" },
+    { "name": "RESP3", "role": "indicator", "itemCode": "RESP3" },
+    { "name": "SAT1", "role": "indicator", "itemCode": "SAT1" },
+    { "name": "SAT2", "role": "indicator", "itemCode": "SAT2" },
+    { "name": "SAT3", "role": "indicator", "itemCode": "SAT3" },
+    { "name": "channel", "role": "demographic" }
+  ],
+  "rowCount": 6,
+  "rows": [
+    { "id": "C01", "REL1": 6, "REL2": 6, "REL3": 2, "RESP1": 5, "RESP2": 6, "RESP3": 2, "SAT1": 6, "SAT2": 6, "SAT3": 6, "channel": "email" },
+    { "id": "C02", "REL1": 5, "REL2": 6, "REL3": 3, "RESP1": 6, "RESP2": 5, "RESP3": 2, "SAT1": 6, "SAT2": 5, "SAT3": 6, "channel": "chat" },
+    { "id": "C03", "REL1": 4, "REL2": 4, "REL3": 4, "RESP1": 4, "RESP2": 4, "RESP3": 4, "SAT1": 4, "SAT2": 4, "SAT3": 4, "channel": "phone" },
+    { "id": "C04", "REL1": 7, "REL2": 6, "REL3": 1, "RESP1": 6, "RESP2": 7, "RESP3": 1, "SAT1": 7, "SAT2": 6, "SAT3": 7, "channel": "email" },
+    { "id": "C05", "REL1": 3, "REL2": 4, "REL3": null, "RESP1": 3, "RESP2": 4, "RESP3": 5, "SAT1": 3, "SAT2": 4, "SAT3": 3, "channel": "web" },
+    { "id": "C06", "REL1": 2, "REL2": 3, "REL3": 6, "RESP1": 2, "RESP2": 3, "RESP3": 6, "SAT1": 2, "SAT2": 3, "SAT3": 2, "channel": "chat" }
+  ]
+}

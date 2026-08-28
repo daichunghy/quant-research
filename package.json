@@ -1,6 +1,6 @@
 {
   "name": "@agentbiz/quant-research",
-  "version": "0.1.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "description": "Builds checked research instruments, recodes, coverage reports, and analysis specs from typed inputs.",
   "license": "Apache-2.0",
   "private": false,
@@ -21,7 +21,8 @@
   },
   "bin": {
     "agentbiz-quant": "dist/cli.js",
-    "agentbiz-quant-mcp": "dist/mcp.js"
+    "agentbiz-quant-mcp": "dist/mcp.js",
+    "agentbiz-quant-workflow": "scripts/research-workflow.mjs"
   },
   "exports": {
     ".": {
@@ -42,7 +43,8 @@
     "schemas",
     "README.md",
     "LICENSE",
-    "examples"
+    "examples",
+    "scripts/research-workflow.mjs"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -56,7 +58,11 @@
     "check:errors": "node scripts/check-errors.mjs",
     "check:secrets": "node scripts/check-secrets.mjs",
     "check:smoke": "node scripts/cli-smoke.mjs",
-    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:errors && npm run check:pack && npm run check:secrets && npm run check:smoke"
+    "check:agent-contract": "node scripts/check-agent-contract.mjs",
+    "agent-eval": "node scripts/run-agent-eval.mjs",
+    "check:release-candidate": "node scripts/check-release-candidate.mjs",
+    "check:clean-room": "node scripts/check-clean-room.mjs",
+    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:errors && npm run check:pack && npm run check:release-candidate && npm run check:clean-room && npm run check:secrets && npm run check:smoke && npm run check:agent-contract"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",

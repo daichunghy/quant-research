@@ -25,7 +25,7 @@ if (paths.length === 0) {
   process.exit(1);
 }
 
-const allowed = /^(package\.json|LICENSE|README\.md|dist\/|schemas\/|examples\/)/;
+const allowed = /^(package\.json|LICENSE|README\.md|dist\/|schemas\/|examples\/|scripts\/research-workflow\.mjs$)/;
 const forbidden = paths.filter((path) => !allowed.test(path));
 if (forbidden.length > 0) {
   process.stderr.write(`Packed unexpected files:\n${forbidden.join("\n")}\n`);
@@ -41,6 +41,7 @@ const required = [
   "dist/mcp.js",
   "dist/tools/index.js",
   "dist/tools/execute.js",
+  "scripts/research-workflow.mjs",
   "schemas/instrument.v1.schema.json",
   "schemas/topic-card.v1.schema.json",
   "schemas/gap-map.v1.schema.json",

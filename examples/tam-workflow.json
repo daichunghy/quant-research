@@ -1,0 +1,23 @@
+{
+  "workflowVersion": "agentbiz.research-workflow.v1",
+  "name": "TAM demonstration research workflow",
+  "provenance": "demonstration",
+  "inputs": {
+    "instrument": "tam-instrument.json",
+    "topicCard": "tam-topic-card.json",
+    "observed": "tam-observed.json",
+    "dataset": "tam-dataset.json",
+    "recode": "tam-recode.json",
+    "measurement": "tam-measurement.json"
+  },
+  "emitters": [
+    "codebook",
+    "dictionary-csv",
+    "dataset-csv",
+    "spss-data",
+    "spss",
+    "lavaan",
+    "amos",
+    "smartpls"
+  ]
+}

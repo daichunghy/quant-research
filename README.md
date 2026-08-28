@@ -6,7 +6,7 @@ Large language models do not reliably keep Likert bounds, reverse-keyed items, c
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Live status (2026-08-24):** public alpha (`0.1.0-alpha.5` on GitHub, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. npm `alpha` resolves `0.1.0-alpha.5` while `latest` remains `0.1.0-alpha.4`. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Live status (2026-08-28):** alpha.6 is prepared locally but not yet published; the public GitHub and npm alpha remain alpha.5, with `latest` at alpha.4. No external user, downstream repository, or pilot is verified. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
 > If it caught one inconsistent recode before analysis,
 > [star it](https://github.com/daichunghy/quant-research/stargazers). That is
@@ -19,6 +19,24 @@ Install the public alpha from the npm registry:
 ```bash
 npm install @agentbiz/quant-research@alpha
 ```
+
+After the prepared alpha.6 package is published, run the complete packaged
+workflow without cloning the repository:
+
+```bash
+npm install --save-exact @agentbiz/quant-research@0.1.0-alpha.6
+npx agentbiz-quant-workflow --workflow service-quality --out ./quant-output
+```
+
+Then run the complete packaged workflow without cloning the repository:
+
+```bash
+npx agentbiz-quant-workflow --workflow service-quality --out ./quant-output
+```
+
+The command writes a reproducible bundle with a human-readable
+`workflow-summary.md`; it preserves rows and raw columns and reports that no
+statistical engine executed.
 
 The package targets Node.js 20 and 22. Use the GitHub repository for release
 notes, boundary documents, examples, and issue reporting.
@@ -60,6 +78,18 @@ node dist/cli.js emit-lavaan examples/tam-bundle.json
 node dist/cli.js emit-spss examples/tam-bundle.json
 node dist/cli.js csv examples/tam-dataset.json
 ```
+
+Run the complete service-quality example through the named local workflow mode:
+
+```bash
+node scripts/research-workflow.mjs --workflow service-quality --out /tmp/quant-research-service-quality-workflow
+```
+
+Use `node scripts/research-workflow.mjs --help` to see the named modes and the
+descriptor form. The output directory includes a human-readable
+`workflow-summary.md` and machine-readable JSON summary. The workflow emits
+specifications only; its summary reports row/raw-column preservation and
+`statistical engine executed: false`.
 
 MCP stdio: `node dist/mcp.js` (`agentbiz-quant-mcp`). Tools are executable through `executeTool`, not documentation-only.
 
@@ -127,6 +157,10 @@ If it caught one inconsistent recode for you, star the repository. It helps
 other researchers find the contracts.
 
 Release history: [CHANGELOG.md](CHANGELOG.md).
+
+Agent-assisted changes follow the [verification map](docs/agent-verification-map.md) and [evaluation protocol](docs/agent-evaluation-protocol.md). Run `npm run agent-eval -- QR-01` for a manifest-backed local acceptance task.
+
+The current local evidence is recorded in the [agent scaling checkpoint](docs/agent-scaling-checkpoint.md).
 
 ## License
 

@@ -32,3 +32,5 @@ Read `docs/PRODUCT_SPEC.md`, `docs/ARCHITECTURE.md`, `docs/BOUNDARY.md`, and `do
 Run `npm run verify` after meaningful changes.
 
 The repository is a public alpha only after the owner-authorized repository and package publication have been verified. Keep statistical, adoption, grant, and production claims fail-closed until their evidence exists.
+
+Follow [docs/agent-verification-map.md](docs/agent-verification-map.md) and [docs/agent-evaluation-protocol.md](docs/agent-evaluation-protocol.md) for bounded agent work, task scope, acceptance commands and evidence labels.
