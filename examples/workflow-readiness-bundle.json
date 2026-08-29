@@ -1,0 +1,111 @@
+{
+  "instrument": {
+    "schemaVersion": "agentbiz.instrument.v1",
+    "language": "en",
+    "constructs": [
+      {
+        "code": "WC",
+        "name": "Workflow clarity",
+        "kind": "reflective",
+        "scale": {
+          "min": 1,
+          "max": 7,
+          "anchors": [
+            { "value": 1, "label": "Strongly disagree" },
+            { "value": 4, "label": "Neither agree nor disagree" },
+            { "value": 7, "label": "Strongly agree" }
+          ]
+        },
+        "items": [
+          { "code": "WC1", "text": "The steps in this workflow are clear to me.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "WC2", "text": "I can tell what should happen next in this workflow.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "WC3", "text": "This workflow often leaves me unsure about the next step.", "reverse": true, "status": "demonstration", "source": { "note": "Demonstration reverse-keyed item only; not a published scale." } },
+          { "code": "WC4", "text": "The workflow makes task responsibilities easy to understand.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } }
+        ]
+      },
+      {
+        "code": "DC",
+        "name": "Data confidence",
+        "kind": "reflective",
+        "scale": {
+          "min": 1,
+          "max": 5,
+          "anchors": [
+            { "value": 1, "label": "Strongly disagree" },
+            { "value": 3, "label": "Neither agree nor disagree" },
+            { "value": 5, "label": "Strongly agree" }
+          ]
+        },
+        "items": [
+          { "code": "DC1", "text": "I can find the information needed to complete a task.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "DC2", "text": "I often doubt whether the available information is reliable.", "reverse": true, "status": "demonstration", "source": { "note": "Demonstration reverse-keyed item only; not a published scale." } },
+          { "code": "DC3", "text": "The information available to me supports confident decisions.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } }
+        ]
+      },
+      {
+        "code": "SR",
+        "name": "Support readiness",
+        "kind": "formative",
+        "scale": {
+          "min": 1,
+          "max": 7,
+          "anchors": [
+            { "value": 1, "label": "Strongly disagree" },
+            { "value": 4, "label": "Neither agree nor disagree" },
+            { "value": 7, "label": "Strongly agree" }
+          ]
+        },
+        "items": [
+          { "code": "SR1", "text": "Help is available when I encounter a workflow problem.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "SR2", "text": "Training materials cover the tasks I am expected to perform.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "SR3", "text": "Getting support for a workflow issue is difficult.", "reverse": true, "status": "demonstration", "source": { "note": "Demonstration reverse-keyed item only; not a published scale." } },
+          { "code": "SR4", "text": "The responsible team communicates changes clearly.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "SR5", "text": "I know where to report a recurring workflow problem.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } }
+        ]
+      },
+      {
+        "code": "CI",
+        "name": "Continued-use intention",
+        "kind": "reflective",
+        "scale": {
+          "min": 1,
+          "max": 5,
+          "anchors": [
+            { "value": 1, "label": "Strongly disagree" },
+            { "value": 3, "label": "Neither agree nor disagree" },
+            { "value": 5, "label": "Strongly agree" }
+          ]
+        },
+        "items": [
+          { "code": "CI1", "text": "I expect to continue using this workflow.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "CI2", "text": "I would choose this workflow for similar tasks.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "CI3", "text": "Using this workflow is worth the effort.", "status": "demonstration", "source": { "note": "Demonstration item only; not a published scale." } },
+          { "code": "CI4", "text": "I would avoid using this workflow again when an alternative exists.", "reverse": true, "status": "demonstration", "source": { "note": "Demonstration reverse-keyed item only; not a published scale." } }
+        ]
+      }
+    ]
+  },
+  "topicCard": {
+    "schemaVersion": "agentbiz.topic-card.v1",
+    "question": "How are workflow clarity, data confidence, support readiness, and continued-use intention associated in this demonstration instrument?",
+    "claimClass": "association",
+    "population": "not specified; demonstration only",
+    "unit": "workflow user (demonstration record)",
+    "timeframe": "not specified",
+    "constructCodes": ["WC", "DC", "SR", "CI"],
+    "hypotheses": [
+      { "id": "H1", "from": "SR", "to": "WC", "sign": "+" },
+      { "id": "H2", "from": "DC", "to": "WC", "sign": "+" },
+      { "id": "H3", "from": "WC", "to": "CI", "sign": "+" },
+      { "id": "H4", "from": "DC", "to": "CI", "sign": "+" },
+      { "id": "H5", "from": "SR", "to": "CI", "sign": "+" }
+    ],
+    "engine": "smartpls",
+    "mode": "exploratory"
+  },
+  "measurement": {
+    "schemaVersion": "agentbiz.measurement.v1",
+    "mode": "pls-sem",
+    "engineOptions": { "estimator": "PLS" }
+  }
+}
