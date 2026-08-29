@@ -1,0 +1,104 @@
+{
+  "manifestVersion": "agentbiz.reproducibility.v1",
+  "package": {
+    "name": "@agentbiz/quant-research",
+    "version": "0.1.0-alpha.5"
+  },
+  "fixtures": [
+    {
+      "path": "examples/tam-bundle.json",
+      "sha256": "sha256:b2a95a6360ab34b81303678882742a5186600148cd546c9166ccec1f21f1d103"
+    },
+    {
+      "path": "examples/tam-dataset.json",
+      "sha256": "sha256:5986366b91b3860a4d4bb90b4934b2efb38f4744dd5f0454af58cf2b0c0dc84a"
+    },
+    {
+      "path": "examples/tam-instrument.json",
+      "sha256": "sha256:24c63c514d8ecbfdb3eda3ce82a4ca6b907c0cf98022365809077236e1b32cbc"
+    },
+    {
+      "path": "examples/tam-measurement.json",
+      "sha256": "sha256:a03a599192466a1e464f51b736beaba3953847963df7e7b3b08129685b0be3a7"
+    },
+    {
+      "path": "examples/tam-observed.json",
+      "sha256": "sha256:5481cba9000d627513df7f66fd06177c9d753a1906c1d128755aad79d5b7c22d"
+    },
+    {
+      "path": "examples/tam-recode.json",
+      "sha256": "sha256:89c070bac8eef30ed1b587dad191e0a247275c61fd7a850f4b71a420cb0463e5"
+    },
+    {
+      "path": "examples/tam-topic-card.json",
+      "sha256": "sha256:5ee4ca7bfc930c85fb9bbb7d956a5c13cb6b6c054c343d454ffe2f0619bea98a"
+    },
+    {
+      "path": "examples/workflow-readiness-bundle.json",
+      "sha256": "sha256:1b6ac30e2a10ce7ed9d8156a33ba2651e5d846717444f4f9c1267594c5ed0f79"
+    },
+    {
+      "path": "examples/workflow-readiness-dataset.json",
+      "sha256": "sha256:0b090fe711e3f8db109f466e8cdb54316e53a74b980bdab94d164039e86d9f2f"
+    },
+    {
+      "path": "examples/workflow-readiness-instrument.json",
+      "sha256": "sha256:259ac672182600d4e42a68a2484fd433bfcc43d52ace04ab571bb9e575c66bbf"
+    },
+    {
+      "path": "examples/workflow-readiness-measurement.json",
+      "sha256": "sha256:f1fd1084c8f4beb68d345576f82921440445953f9227635084ebe65941a065a6"
+    },
+    {
+      "path": "examples/workflow-readiness-observed.json",
+      "sha256": "sha256:a627201ca8d31f721b835ac46f4dcd489d283e318f570d8eca02da7522624db1"
+    },
+    {
+      "path": "examples/workflow-readiness-recode.json",
+      "sha256": "sha256:c276e99b1552aaddd83d0cda203b258185048dc3af656b2979ce6ffc9fedad91"
+    },
+    {
+      "path": "examples/workflow-readiness-topic-card.json",
+      "sha256": "sha256:2d4980adfed94d8dc1aac2ebe59283369687ae168d49f3a188c9d17b90a781e5"
+    }
+  ],
+  "replays": [
+    {
+      "name": "compile-instrument",
+      "argv": ["compile", "examples/tam-instrument.json"],
+      "artifactDigest": "sha256:a43b6de17fb5577ca267016c0a9c6dc981e00c2ebc4edc9bf681cc9b958e8729"
+    },
+    {
+      "name": "compile-topic-card",
+      "argv": ["compile", "examples/tam-topic-card.json", "--instrument", "examples/tam-instrument.json"],
+      "artifactDigest": "sha256:efe2b3e03508d297c7a5df3f694bc43eb064c6709775082e773ff56c8313a052"
+    },
+    {
+      "name": "compile-measurement",
+      "argv": [
+        "compile",
+        "examples/tam-measurement.json",
+        "--instrument",
+        "examples/tam-instrument.json",
+        "--topic-card",
+        "examples/tam-topic-card.json"
+      ],
+      "artifactDigest": "sha256:91123f48e88e03da71bb08e71ab1c83167f24ecc5adda180e574860dd9e283f8"
+    },
+    {
+      "name": "gap-map",
+      "argv": ["gap", "examples/tam-instrument.json", "examples/tam-observed.json"],
+      "artifactDigest": "sha256:7cc03bd9a4030da54634cbd13ede33e81dec7eb9d38535148cd866b0b0233ce6"
+    },
+    {
+      "name": "dataset-audit",
+      "argv": ["audit", "examples/tam-instrument.json", "examples/tam-dataset.json"],
+      "artifactDigest": "sha256:36987e45fb97a662fc83e95d085610959714921d8e9af7ef1036bfa132ca809b"
+    },
+    {
+      "name": "recode",
+      "argv": ["recode", "examples/tam-instrument.json", "examples/tam-dataset.json"],
+      "artifactDigest": "sha256:d6b7385dd4b5b2334eaced86ed17979f7930576eb64cba5f4a117ee811734784"
+    }
+  ]
+}

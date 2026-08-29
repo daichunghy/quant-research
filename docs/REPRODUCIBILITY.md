@@ -17,6 +17,11 @@ The verification gate covers TypeScript compilation, schema reconciliation, pack
 secret scanning, and CLI smoke tests. The exact package version resolved by a consumer should be
 recorded separately with `npm view @agentbiz/quant-research dist-tags versions --json`.
 
+The distributed [`examples/reproducibility-manifest.json`](../examples/reproducibility-manifest.json)
+pins the SHA-256 bytes of every JSON example and the receipt artifact digests produced by the
+replay commands recorded in that manifest. The test suite checks both the fixture bytes and those
+digests; the package content check also requires the manifest to be present in the published archive.
+
 ## Deterministic examples
 
 ```sh

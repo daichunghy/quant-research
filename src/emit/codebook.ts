@@ -1,12 +1,6 @@
 import { buildDictionary } from "../instrument/index.js";
 import type { Instrument } from "../core/types.js";
-
-function csvEscape(value: string): string {
-  if (/[",\n]/.test(value)) {
-    return `"${value.replaceAll('"', '""')}"`;
-  }
-  return value;
-}
+import { csvEscape, markdownInline, markdownTableCell } from "./escape.js";
 
 export function emitDictionaryCsv(instrument: Instrument): string {
   const rows = buildDictionary(instrument);
@@ -44,26 +38,28 @@ export function emitCodebookMarkdown(instrument: Instrument): string {
   const lines: string[] = [
     "# Instrument codebook",
     "",
-    `Language: ${instrument.language}`,
+    `Language: ${markdownInline(instrument.language)}`,
     "Demonstration items are not published measurement instruments.",
     "",
   ];
   for (const construct of instrument.constructs) {
-    lines.push(`## ${construct.code} — ${construct.name}`);
+    lines.push(`## ${construct.code} — ${markdownInline(construct.name)}`);
     lines.push("");
     lines.push(
       `Kind: ${construct.kind}. Scale ${construct.scale.min}–${construct.scale.max}. Items: ${construct.items.length}.`,
     );
     if (construct.scale.anchors) {
       lines.push(
-        `Anchors: ${construct.scale.anchors.map((anchor) => `${anchor.value} = ${anchor.label}`).join("; ")}.`,
+        `Anchors: ${construct.scale.anchors
+          .map((anchor) => `${anchor.value} = ${markdownInline(anchor.label)}`)
+          .join("; ")}.`,
       );
     }
     lines.push("");
     lines.push("| Code | Reverse | Status | Text |");
     lines.push("| --- | --- | --- | --- |");
     for (const item of construct.items) {
-      const text = item.text.replaceAll("|", "\\|");
+      const text = markdownTableCell(item.text);
       lines.push(`| ${item.code} | ${item.reverse ? "yes" : "no"} | ${item.status} | ${text} |`);
     }
     lines.push("");

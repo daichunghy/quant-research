@@ -1,7 +1,7 @@
 {
   "name": "@agentbiz/quant-research",
   "version": "0.1.0-alpha.5",
-  "description": "Deterministic instrument, recode, and measurement-spec contracts for agentic quantitative research. Does not run SEM or write spreadsheets.",
+  "description": "Builds checked research instruments, recodes, coverage reports, and analysis specs from typed inputs.",
   "license": "Apache-2.0",
   "private": false,
   "repository": {
@@ -46,15 +46,17 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "first-use": "npm run build && node scripts/first-use.mjs",
     "prepack": "npm run build",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "check:pack": "node scripts/check-pack.mjs",
     "check:schema": "node scripts/check-schema.mjs",
+    "check:errors": "node scripts/check-errors.mjs",
     "check:secrets": "node scripts/check-secrets.mjs",
     "check:smoke": "node scripts/cli-smoke.mjs",
-    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:pack && npm run check:secrets && npm run check:smoke"
+    "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:errors && npm run check:pack && npm run check:secrets && npm run check:smoke"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",

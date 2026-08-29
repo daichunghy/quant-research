@@ -57,6 +57,7 @@ const required = [
   "examples/workflow-readiness-recode.json",
   "examples/workflow-readiness-dataset.json",
   "examples/workflow-readiness-observed.json",
+  "examples/reproducibility-manifest.json",
 ];
 const missing = required.filter((path) => !paths.includes(path));
 if (missing.length > 0) {
