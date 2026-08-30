@@ -59,7 +59,7 @@
     "verify": "npm run typecheck && npm run build && npm run test && npm run check:schema && npm run check:errors && npm run check:pack && npm run check:secrets && npm run check:smoke"
   },
   "devDependencies": {
-    "@types/node": "^22.15.3",
+    "@types/node": "^26.4.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "typescript": "^5.8.3",
