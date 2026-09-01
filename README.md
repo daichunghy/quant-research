@@ -6,7 +6,7 @@ Large language models do not reliably keep Likert bounds, reverse-keyed items, c
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Live status (2026-08-24):** public alpha (`0.1.0-alpha.5` on GitHub, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. npm `alpha` resolves `0.1.0-alpha.5` while `latest` remains `0.1.0-alpha.4`. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Live status (2026-09-01):** public alpha (`0.1.0-alpha.5` on GitHub, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. The public npm page currently shows [`@agentbiz/quant-research@0.1.0-alpha.4`](https://www.npmjs.com/package/%40agentbiz/quant-research); do not count registry downloads as human adoption. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
 > If it caught one inconsistent recode before analysis,
 > [star it](https://github.com/daichunghy/quant-research/stargazers). That is
