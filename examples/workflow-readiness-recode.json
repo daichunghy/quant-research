@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "agentbiz.recode.v1",
+  "operations": [
+    { "kind": "reverse-score", "itemCode": "WC3", "as": "WC3_R" },
+    { "kind": "reverse-score", "itemCode": "DC2", "as": "DC2_R" },
+    { "kind": "reverse-score", "itemCode": "SR3", "as": "SR3_R" },
+    { "kind": "reverse-score", "itemCode": "CI4", "as": "CI4_R" },
+    { "kind": "construct-score", "constructCode": "WC", "as": "WC_MEAN" },
+    { "kind": "construct-score", "constructCode": "DC", "as": "DC_MEAN" },
+    { "kind": "construct-score", "constructCode": "CI", "as": "CI_MEAN" },
+    { "kind": "flag-straight-line", "as": "STRAIGHT" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "agentbiz.topic-card.v1",
+  "question": "How are workflow clarity, data confidence, support readiness, and continued-use intention associated in this demonstration instrument?",
+  "claimClass": "association",
+  "population": "not specified; demonstration only",
+  "unit": "workflow user (demonstration record)",
+  "timeframe": "not specified",
+  "constructCodes": ["WC", "DC", "SR", "CI"],
+  "hypotheses": [
+    { "id": "H1", "from": "SR", "to": "WC", "sign": "+" },
+    { "id": "H2", "from": "DC", "to": "WC", "sign": "+" },
+    { "id": "H3", "from": "WC", "to": "CI", "sign": "+" },
+    { "id": "H4", "from": "DC", "to": "CI", "sign": "+" },
+    { "id": "H5", "from": "SR", "to": "CI", "sign": "+" }
+  ],
+  "engine": "smartpls",
+  "mode": "exploratory"
+}

@@ -6,7 +6,7 @@ Large language models do not reliably keep Likert bounds, reverse-keyed items, c
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Live status (2026-08-28):** alpha.6 is prepared locally but not yet published; the public GitHub and npm alpha remain alpha.5, with `latest` at alpha.4. No external user, downstream repository, or pilot is verified. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Live status (2026-09-01):** public alpha (`0.1.0-alpha.5` on GitHub, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. The public npm page currently shows [`@agentbiz/quant-research@0.1.0-alpha.4`](https://www.npmjs.com/package/%40agentbiz/quant-research); do not count registry downloads as human adoption. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
 > If it caught one inconsistent recode before analysis,
 > [star it](https://github.com/daichunghy/quant-research/stargazers). That is
@@ -91,6 +91,11 @@ descriptor form. The output directory includes a human-readable
 specifications only; its summary reports row/raw-column preservation and
 `statistical engine executed: false`.
 
+The `examples/workflow-readiness-*.json` family is a second bundled
+demonstration. It uses four factors with 4/3/5/4 items, mixed 1–7 and 1–5
+scales, reverse-keyed items, and a formative factor. Every item is labelled
+`demonstration` and is explicitly not a published scale; the files contain no
+research citation or provenance claim.
 MCP stdio: `node dist/mcp.js` (`agentbiz-quant-mcp`). Tools are executable through `executeTool`, not documentation-only.
 
 Agent skill: copy `skills/quant-research/SKILL.md` into the target agent's skill directory, or use the installed package with `AGENTBIZ_QUANT_RESEARCH_ROOT` pointing at a clone. The skill is portable and does not assume the maintainer's filesystem path.
