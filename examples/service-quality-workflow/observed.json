@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "agentbiz.gap-map.v1",
+  "observed": [
+    { "column": "REL1", "itemCode": "REL1", "constructCode": "REL", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "REL2", "itemCode": "REL2", "constructCode": "REL", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "REL3", "itemCode": "REL3", "constructCode": "REL", "reverse": true, "scale": { "min": 1, "max": 7 } },
+    { "column": "RESP1", "itemCode": "RESP1", "constructCode": "RESP", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "RESP2", "itemCode": "RESP2", "constructCode": "RESP", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "RESP3", "itemCode": "RESP3", "constructCode": "RESP", "reverse": true, "scale": { "min": 1, "max": 7 } },
+    { "column": "SAT1", "itemCode": "SAT1", "constructCode": "SAT", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "SAT2", "itemCode": "SAT2", "constructCode": "SAT", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "SAT3", "itemCode": "SAT3", "constructCode": "SAT", "reverse": false, "scale": { "min": 1, "max": 7 } }
+  ]
+}

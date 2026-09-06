@@ -20,6 +20,19 @@ describe("instrument", () => {
     ]);
   });
 
+  it("compiles the multi-factor service-quality demonstration instrument", () => {
+    const compiled = compileInstrument(loadExample("service-quality-instrument.json"));
+    expect(compiled.receipt.status).toBe("compiled");
+    expect(compiled.artifact.instrument.constructs.map((item) => item.code)).toEqual(["REL", "RESP", "SAT"]);
+    expect(compiled.artifact.dictionary).toHaveLength(9);
+    expect(compiled.artifact.dictionary.filter((row) => row.reverse).map((row) => row.itemCode)).toEqual([
+      "RESP3",
+      "SAT4",
+    ]);
+    expect(compiled.artifact.instrument.constructs[0]?.scale.max).toBe(7);
+    expect(compiled.artifact.instrument.constructs.map((item) => item.items.length)).toEqual([2, 3, 4]);
+  });
+
   it("is digest-stable", () => {
     const input = loadExample("tam-instrument.json");
     const first = compileInstrument(input);

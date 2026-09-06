@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "agentbiz.measurement.v1",
+  "mode": "cb-sem",
+  "engineOptions": { "estimator": "ML" }
+}

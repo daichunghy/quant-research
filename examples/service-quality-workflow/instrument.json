@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "agentbiz.instrument.v1",
+  "language": "en",
+  "constructs": [
+    {
+      "code": "REL",
+      "name": "Service reliability",
+      "kind": "reflective",
+      "scale": {
+        "min": 1,
+        "max": 7,
+        "anchors": [
+          { "value": 1, "label": "Strongly disagree" },
+          { "value": 4, "label": "Neither agree nor disagree" },
+          { "value": 7, "label": "Strongly agree" }
+        ]
+      },
+      "items": [
+        {
+          "code": "REL1",
+          "text": "This service delivers what it promises.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        },
+        {
+          "code": "REL2",
+          "text": "This service is dependable when I need it.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        },
+        {
+          "code": "REL3",
+          "text": "This service often fails to deliver the expected result.",
+          "reverse": true,
+          "status": "demonstration",
+          "source": { "note": "Demonstration reverse-keyed item; not a published scale." }
+        }
+      ]
+    },
+    {
+      "code": "RESP",
+      "name": "Service responsiveness",
+      "kind": "reflective",
+      "scale": { "min": 1, "max": 7 },
+      "items": [
+        {
+          "code": "RESP1",
+          "text": "My requests receive a timely response.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        },
+        {
+          "code": "RESP2",
+          "text": "The service explains delays clearly.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        },
+        {
+          "code": "RESP3",
+          "text": "Getting help from this service takes too much effort.",
+          "reverse": true,
+          "status": "demonstration",
+          "source": { "note": "Demonstration reverse-keyed item; not a published scale." }
+        }
+      ]
+    },
+    {
+      "code": "SAT",
+      "name": "Overall service satisfaction",
+      "kind": "reflective",
+      "scale": { "min": 1, "max": 7 },
+      "items": [
+        {
+          "code": "SAT1",
+          "text": "Overall, I am satisfied with this service.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        },
+        {
+          "code": "SAT2",
+          "text": "This service meets my expectations.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        },
+        {
+          "code": "SAT3",
+          "text": "I would choose this service again for a similar need.",
+          "status": "demonstration",
+          "source": { "note": "Demonstration item for a service-quality workflow; not a published scale." }
+        }
+      ]
+    }
+  ]
+}

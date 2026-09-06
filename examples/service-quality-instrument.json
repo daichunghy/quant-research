@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "agentbiz.instrument.v1",
+  "language": "en",
+  "constructs": [
+    {
+      "code": "REL",
+      "name": "Service reliability",
+      "kind": "reflective",
+      "scale": {
+        "min": 1,
+        "max": 7,
+        "anchors": [
+          { "value": 1, "label": "Strongly disagree" },
+          { "value": 4, "label": "Neither agree nor disagree" },
+          { "value": 7, "label": "Strongly agree" }
+        ]
+      },
+      "items": [
+        {
+          "code": "REL1",
+          "text": "This service performs consistently when I need it.",
+          "status": "demonstration"
+        },
+        {
+          "code": "REL2",
+          "text": "This service delivers the outcome it promises.",
+          "status": "demonstration"
+        }
+      ]
+    },
+    {
+      "code": "RESP",
+      "name": "Service responsiveness",
+      "kind": "reflective",
+      "scale": { "min": 1, "max": 7 },
+      "items": [
+        {
+          "code": "RESP1",
+          "text": "Requests are handled within a reasonable time.",
+          "status": "demonstration"
+        },
+        {
+          "code": "RESP2",
+          "text": "The service communicates clearly when work is delayed.",
+          "status": "demonstration"
+        },
+        {
+          "code": "RESP3",
+          "text": "Getting help from this service takes too much effort.",
+          "reverse": true,
+          "status": "demonstration"
+        }
+      ]
+    },
+    {
+      "code": "SAT",
+      "name": "Service satisfaction",
+      "kind": "reflective",
+      "scale": { "min": 1, "max": 7 },
+      "items": [
+        {
+          "code": "SAT1",
+          "text": "Overall, I am satisfied with this service.",
+          "status": "demonstration"
+        },
+        {
+          "code": "SAT2",
+          "text": "This service meets my expectations.",
+          "status": "demonstration"
+        },
+        {
+          "code": "SAT3",
+          "text": "I would choose this service again for a similar need.",
+          "status": "demonstration"
+        },
+        {
+          "code": "SAT4",
+          "text": "Using this service has been a frustrating experience.",
+          "reverse": true,
+          "status": "demonstration"
+        }
+      ]
+    }
+  ]
+}

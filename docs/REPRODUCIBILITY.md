@@ -26,6 +26,7 @@ digests; the package content check also requires the manifest to be present in t
 
 ```sh
 node dist/cli.js compile examples/tam-instrument.json
+node dist/cli.js compile examples/service-quality-instrument.json
 node dist/cli.js codebook examples/tam-instrument.json
 node dist/cli.js recode examples/tam-instrument.json examples/tam-dataset.json
 node dist/cli.js audit examples/tam-instrument.json examples/tam-dataset.json
@@ -34,8 +35,9 @@ node dist/cli.js emit-spss examples/tam-bundle.json
 node dist/cli.js csv examples/tam-dataset.json
 ```
 
-Use the JSON fixtures as demonstration inputs only. The TAM items are not presented as a published
-scale, and the emitted syntax is not a fitted model. A reproducibility record should include the
+Use the JSON fixtures as demonstration inputs only. The TAM and service-quality items are not
+presented as published scales, and the emitted syntax is not a fitted model. A reproducibility
+record should include the
 release tag, Node.js version, command, exit status, and output artifact hash where the artifact is
 retained.
 

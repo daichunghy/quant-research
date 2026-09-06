@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "agentbiz.recode.v1",
+  "operations": [
+    { "kind": "reverse-score", "itemCode": "REL3", "as": "REL3_R" },
+    { "kind": "reverse-score", "itemCode": "RESP3", "as": "RESP3_R" },
+    { "kind": "construct-score", "constructCode": "REL", "as": "REL_MEAN" },
+    { "kind": "construct-score", "constructCode": "RESP", "as": "RESP_MEAN" },
+    { "kind": "construct-score", "constructCode": "SAT", "as": "SAT_MEAN" },
+    { "kind": "flag-straight-line", "as": "STRAIGHT" }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "workflowVersion": "agentbiz.research-workflow.v1",
+  "name": "Service quality and customer experience demonstration workflow",
+  "provenance": "demonstration",
+  "inputs": {
+    "instrument": "instrument.json",
+    "topicCard": "topic-card.json",
+    "observed": "observed.json",
+    "dataset": "dataset.json",
+    "recode": "recode.json",
+    "measurement": "measurement.json"
+  },
+  "emitters": [
+    "codebook",
+    "dictionary-csv",
+    "dataset-csv",
+    "spss-data",
+    "spss",
+    "lavaan",
+    "amos",
+    "smartpls"
+  ]
+}
