@@ -60,6 +60,12 @@ node dist/cli.js emit-spss examples/tam-bundle.json
 node dist/cli.js csv examples/tam-dataset.json
 ```
 
+The `examples/workflow-readiness-*.json` family is a second bundled
+demonstration. It uses four factors with 4/3/5/4 items, mixed 1–7 and 1–5
+scales, reverse-keyed items, and a formative factor. Every item is labelled
+`demonstration` and is explicitly not a published scale; the files contain no
+research citation or provenance claim.
+
 MCP stdio: `node dist/mcp.js` (`agentbiz-quant-mcp`). Tools are executable through `executeTool`, not documentation-only.
 
 Agent skill: copy `skills/quant-research/SKILL.md` into the target agent's skill directory, or use the installed package with `AGENTBIZ_QUANT_RESEARCH_ROOT` pointing at a clone. The skill is portable and does not assume the maintainer's filesystem path.

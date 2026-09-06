@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "agentbiz.gap-map.v1",
+  "observed": [
+    { "column": "WC1", "itemCode": "WC1", "constructCode": "WC", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "WC2", "itemCode": "WC2", "constructCode": "WC", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "WC3", "itemCode": "WC3", "constructCode": "WC", "reverse": true, "scale": { "min": 1, "max": 7 } },
+    { "column": "WC4", "itemCode": "WC4", "constructCode": "WC", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "DC1", "itemCode": "DC1", "constructCode": "DC", "reverse": false, "scale": { "min": 1, "max": 5 } },
+    { "column": "DC2", "itemCode": "DC2", "constructCode": "DC", "reverse": true, "scale": { "min": 1, "max": 5 } },
+    { "column": "DC3", "itemCode": "DC3", "constructCode": "DC", "reverse": false, "scale": { "min": 1, "max": 5 } },
+    { "column": "SR1", "itemCode": "SR1", "constructCode": "SR", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "SR2", "itemCode": "SR2", "constructCode": "SR", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "SR3", "itemCode": "SR3", "constructCode": "SR", "reverse": true, "scale": { "min": 1, "max": 7 } },
+    { "column": "SR4", "itemCode": "SR4", "constructCode": "SR", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "SR5", "itemCode": "SR5", "constructCode": "SR", "reverse": false, "scale": { "min": 1, "max": 7 } },
+    { "column": "CI1", "itemCode": "CI1", "constructCode": "CI", "reverse": false, "scale": { "min": 1, "max": 5 } },
+    { "column": "CI2", "itemCode": "CI2", "constructCode": "CI", "reverse": false, "scale": { "min": 1, "max": 5 } },
+    { "column": "CI3", "itemCode": "CI3", "constructCode": "CI", "reverse": false, "scale": { "min": 1, "max": 5 } },
+    { "column": "CI4", "itemCode": "CI4", "constructCode": "CI", "reverse": true, "scale": { "min": 1, "max": 5 } }
+  ]
+}
