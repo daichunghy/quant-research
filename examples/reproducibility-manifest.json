@@ -32,6 +32,34 @@
     {
       "path": "examples/tam-topic-card.json",
       "sha256": "sha256:5ee4ca7bfc930c85fb9bbb7d956a5c13cb6b6c054c343d454ffe2f0619bea98a"
+    },
+    {
+      "path": "examples/workflow-readiness-bundle.json",
+      "sha256": "sha256:1b6ac30e2a10ce7ed9d8156a33ba2651e5d846717444f4f9c1267594c5ed0f79"
+    },
+    {
+      "path": "examples/workflow-readiness-dataset.json",
+      "sha256": "sha256:0b090fe711e3f8db109f466e8cdb54316e53a74b980bdab94d164039e86d9f2f"
+    },
+    {
+      "path": "examples/workflow-readiness-instrument.json",
+      "sha256": "sha256:259ac672182600d4e42a68a2484fd433bfcc43d52ace04ab571bb9e575c66bbf"
+    },
+    {
+      "path": "examples/workflow-readiness-measurement.json",
+      "sha256": "sha256:f1fd1084c8f4beb68d345576f82921440445953f9227635084ebe65941a065a6"
+    },
+    {
+      "path": "examples/workflow-readiness-observed.json",
+      "sha256": "sha256:a627201ca8d31f721b835ac46f4dcd489d283e318f570d8eca02da7522624db1"
+    },
+    {
+      "path": "examples/workflow-readiness-recode.json",
+      "sha256": "sha256:c276e99b1552aaddd83d0cda203b258185048dc3af656b2979ce6ffc9fedad91"
+    },
+    {
+      "path": "examples/workflow-readiness-topic-card.json",
+      "sha256": "sha256:2d4980adfed94d8dc1aac2ebe59283369687ae168d49f3a188c9d17b90a781e5"
     }
   ],
   "replays": [

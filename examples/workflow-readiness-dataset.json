@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "agentbiz.dataset.v1",
+  "columns": [
+    { "name": "id", "role": "id" },
+    { "name": "WC1", "role": "indicator", "itemCode": "WC1" },
+    { "name": "WC2", "role": "indicator", "itemCode": "WC2" },
+    { "name": "WC3", "role": "indicator", "itemCode": "WC3" },
+    { "name": "WC4", "role": "indicator", "itemCode": "WC4" },
+    { "name": "DC1", "role": "indicator", "itemCode": "DC1" },
+    { "name": "DC2", "role": "indicator", "itemCode": "DC2" },
+    { "name": "DC3", "role": "indicator", "itemCode": "DC3" },
+    { "name": "SR1", "role": "indicator", "itemCode": "SR1" },
+    { "name": "SR2", "role": "indicator", "itemCode": "SR2" },
+    { "name": "SR3", "role": "indicator", "itemCode": "SR3" },
+    { "name": "SR4", "role": "indicator", "itemCode": "SR4" },
+    { "name": "SR5", "role": "indicator", "itemCode": "SR5" },
+    { "name": "CI1", "role": "indicator", "itemCode": "CI1" },
+    { "name": "CI2", "role": "indicator", "itemCode": "CI2" },
+    { "name": "CI3", "role": "indicator", "itemCode": "CI3" },
+    { "name": "CI4", "role": "indicator", "itemCode": "CI4" },
+    { "name": "team", "role": "demographic" }
+  ],
+  "rowCount": 4,
+  "rows": [
+    { "id": "R01", "WC1": 4, "WC2": 4, "WC3": 4, "WC4": 4, "DC1": 4, "DC2": 4, "DC3": 4, "SR1": 4, "SR2": 4, "SR3": 4, "SR4": 4, "SR5": 4, "CI1": 4, "CI2": 4, "CI3": 4, "CI4": 4, "team": "A" },
+    { "id": "R02", "WC1": 6, "WC2": 5, "WC3": 2, "WC4": 6, "DC1": 5, "DC2": 2, "DC3": 4, "SR1": 5, "SR2": 6, "SR3": 2, "SR4": 5, "SR5": 6, "CI1": 5, "CI2": 4, "CI3": 4, "CI4": 2, "team": "B" },
+    { "id": "R03", "WC1": 3, "WC2": 4, "WC3": 5, "WC4": 3, "DC1": 3, "DC2": null, "DC3": 3, "SR1": 3, "SR2": 4, "SR3": 5, "SR4": 3, "SR5": 4, "CI1": 3, "CI2": 3, "CI3": 2, "CI4": 4, "team": "A" },
+    { "id": "R04", "WC1": 7, "WC2": 6, "WC3": 1, "WC4": 7, "DC1": 4, "DC2": 1, "DC3": 5, "SR1": 6, "SR2": 5, "SR3": 1, "SR4": 6, "SR5": 5, "CI1": 5, "CI2": 4, "CI3": 5, "CI4": 1, "team": "B" }
+  ]
+}
