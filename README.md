@@ -6,7 +6,7 @@ Large language models do not reliably keep Likert bounds, reverse-keyed items, c
 
 It compiles JSON in and emits dictionaries, coverage maps, recode artifacts, SPSS syntax, lavaan specs, AMOS path lists, and SmartPLS indicator maps. It does **not** estimate models, compute fit indices, write Excel or Google Sheets, or call a model provider.
 
-**Live status (2026-09-01):** public alpha (`0.1.0-alpha.5` on GitHub, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. The public npm page currently shows [`@agentbiz/quant-research@0.1.0-alpha.4`](https://www.npmjs.com/package/%40agentbiz/quant-research); do not count registry downloads as human adoption. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
+**Live status (2026-09-06):** public alpha (`0.1.0-alpha.6` on GitHub and npm, 0 stars, 0 forks). No external user, downstream repository, or pilot is verified. The npm `alpha` and `latest` dist-tags both resolve `0.1.0-alpha.6`, and the `v0.1.0-alpha.6` tag matches the published tarball; do not count registry downloads as human adoption. This release is a deterministic contract and emitter library. It does not estimate SEM, compute fit indices, write Excel or Google Sheets, call a model provider, or claim adoption, downloads, or dependent repositories.
 
 > If it caught one inconsistent recode before analysis,
 > [star it](https://github.com/daichunghy/quant-research/stargazers). That is
@@ -20,17 +20,10 @@ Install the public alpha from the npm registry:
 npm install @agentbiz/quant-research@alpha
 ```
 
-After the prepared alpha.6 package is published, run the complete packaged
-workflow without cloning the repository:
+Run the complete packaged workflow without cloning the repository:
 
 ```bash
 npm install --save-exact @agentbiz/quant-research@0.1.0-alpha.6
-npx agentbiz-quant-workflow --workflow service-quality --out ./quant-output
-```
-
-Then run the complete packaged workflow without cloning the repository:
-
-```bash
 npx agentbiz-quant-workflow --workflow service-quality --out ./quant-output
 ```
 
@@ -46,7 +39,7 @@ notes, boundary documents, examples, and issue reporting.
 To reproduce the committed release locally, use the verified GitHub tag:
 
 ```bash
-git clone --branch v0.1.0-alpha.5 https://github.com/daichunghy/quant-research.git
+git clone --branch v0.1.0-alpha.6 https://github.com/daichunghy/quant-research.git
 cd quant-research
 npm ci
 npm run verify
@@ -54,7 +47,7 @@ npm run verify
 
 Support and first-run questions: [`.github/SUPPORT.md`](.github/SUPPORT.md) or [GitHub Discussions](https://github.com/daichunghy/quant-research/discussions).
 
-This is Github 4. It is not PatchGate, contribkit, or OpenSheet-AI. See [docs/BOUNDARY.md](docs/BOUNDARY.md).
+quant-research is a standalone repository. It is not PatchGate, contribkit, or OpenSheet-AI. See [docs/BOUNDARY.md](docs/BOUNDARY.md).
 For citation and clean-room reproduction, see [`CITATION.cff`](CITATION.cff) and
 [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
 
